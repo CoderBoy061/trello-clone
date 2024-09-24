@@ -34,8 +34,8 @@ export const createUser = async (req, res) => {
     const options = {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: 'Strict',
-    
+      sameSite: 'none',
+
     };
 
     return res
@@ -73,8 +73,8 @@ export const loginUser = async (req, res) => {
     const options = {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: 'Strict',
-     
+      sameSite: 'none',
+
     };
     return res
       .status(200)
@@ -126,8 +126,8 @@ export const socialRegister = async (req, res) => {
     const options = {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: 'Strict',
-      
+      sameSite: 'none',
+
     };
 
     return res
@@ -170,8 +170,8 @@ export const socialLogin = async (req, res) => {
     const options = {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: 'Strict',
-  
+      sameSite: 'none',
+
     };
     return res
       .status(200)
@@ -199,8 +199,8 @@ export const logoutUser = async (req, res) => {
   const options = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: 'Strict',
- 
+    sameSite: 'none',
+
   };
 
   return res
@@ -241,7 +241,7 @@ export const refreshToken = async (req, res) => {
     const options = {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: 'Strict',
+      sameSite: 'none',
 
     };
 
