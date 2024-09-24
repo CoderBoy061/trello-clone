@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(
     cors({
-      origin: ["http://localhost:5173","http://localhost:3000"],
+      origin: ["https://mern-task-management.netlify.app/","http://localhost:5173","http://localhost:3000"],
       methods: ["GET", "POST", "PATCH", "DELETE"],
       credentials: true,
     })
