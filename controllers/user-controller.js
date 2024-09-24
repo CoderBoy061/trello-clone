@@ -35,8 +35,7 @@ export const createUser = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: 'Strict',
-      domain: 'mern-task-management.netlify.app',  // Set the correct domain
-      path: '/',
+    
     };
 
     return res
@@ -75,8 +74,7 @@ export const loginUser = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: 'Strict',
-      domain: 'mern-task-management.netlify.app',  // Set the correct domain
-      path: '/',
+     
     };
     return res
       .status(200)
@@ -129,8 +127,7 @@ export const socialRegister = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: 'Strict',
-      domain: 'mern-task-management.netlify.app',  // Set the correct domain
-      path: '/',
+      
     };
 
     return res
@@ -174,8 +171,7 @@ export const socialLogin = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: 'Strict',
-      domain: 'mern-task-management.netlify.app',  // Set the correct domain
-      path: '/',
+  
     };
     return res
       .status(200)
@@ -204,8 +200,7 @@ export const logoutUser = async (req, res) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: 'Strict',
-    domain: 'mern-task-management.netlify.app',  // Set the correct domain
-    path: '/',
+ 
   };
 
   return res
@@ -247,8 +242,7 @@ export const refreshToken = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: 'Strict',
-      domain: 'mern-task-management.netlify.app',  // Set the correct domain
-      path: '/',
+
     };
 
     const { accessToken, refreshToken: newRefreshToken } = await generateTokens(
